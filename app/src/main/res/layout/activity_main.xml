@@ -7,28 +7,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
-    <!--Search view for filtering list view-->
-    <SearchView
-        android:id="@+id/idSV"
+    <fragment
+        android:id="@+id/nav_host_main"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:iconifiedByDefault="false"
-        android:padding="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:queryHint="Search Programming language" />
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_main"/>
 
-    <!--List View from which data is to be searched
-         for different programming languages-->
-    <ListView
-        android:id="@+id/idLVProgrammingLanguages"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="5sp"
-      app:layout_constraintBottom_toTopOf="@id/idSV" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
